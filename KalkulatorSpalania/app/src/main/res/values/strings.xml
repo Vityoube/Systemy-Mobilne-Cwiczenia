@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Kalkulator Spalania</string>
+    <string name="liczba1">Wartość tankowania w zł</string>
+    <string name="liczba2">Cena za litr</string>
+    <string name="liczba3">Ilość przejechanych km</string>
+    <string name="oblicz">Oblicz spalanie</string>
+    <string name="help">Sposób obliczania</string>
+    <string name="spalanie">Spalanie w 1/100 km</string>
+    <string name="wroc">Powrót</string>
+</resources>
