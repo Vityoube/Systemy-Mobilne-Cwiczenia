@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Czujniki_srodowiska</string>
+    <string name="opis_cisnienie">Pomiar Cisnienia </string>
+    <string name="cisnienie">Wyświetlana wartość ciśnienia </string>
+    <string name="opis_swiatlo">Pomiar Swiatła </string>
+    <string name="swiatlo">Wyświetlana wartość natężenia swiatła </string>
+    <string name="opis_temperatura">Pomiar Temperatury </string>
+    <string name="temperatura">Wyświetlana wartość temperatury  </string>
+    <string name="opis_wilgotnosc">Pomiar Względnej Wilgotności </string>
+    <string name="wilgotnosc">Wyświetlana wartość wilgotności w %  </string>
+    <string name="punkt_rosy">Wartość punktu rosy </string>
+    <string name="bezwzgledna_wilgotnosc">Wyświetlana bezwględna wilgotność w % </string>
+</resources>
