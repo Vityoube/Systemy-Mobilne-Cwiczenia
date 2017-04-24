@@ -28,11 +28,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public  static  float sensorX;
     public static float x;
 
+    public static  float textX;
+
     public static  float scale;
 
     final float  alpha = (float)0.8;
-    //public  static   SensorManager mSensorManager;
-    //public  static Sensor mAccelerometer;
+    public  static   SensorManager mSensorManager;
+    public  static Sensor mAccelerometer;
+
+    public static float currentAxisDegree=(float)0.0;
 
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -40,19 +44,28 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
      */
 
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(new CanvasView(this));
-        SensorManager sm = (SensorManager)getSystemService(SENSOR_SERVICE);
-        sm.registerListener(this,sm.getDefaultSensor(Sensor.TYPE_ORIENTATION),0,null);
-       // mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
+        mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        mSensorManager.registerListener(this,mAccelerometer,SensorManager.SENSOR_DELAY_NORMAL);
     }
+
+    protected void onResume() {
+        super.onResume();
+        mSensorManager.registerListener(this, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
+    }
+    protected void onPause() {
+        super.onPause();
+        mSensorManager.unregisterListener(this);
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 // Inflate the menu; this adds items to the action bar if it is present.
-       // getMenuInflater().inflate(R.menu.menu_main, menu);
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -69,13 +82,13 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     public void onSensorChanged(SensorEvent event) {
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-
             sensorX = (alpha * sensorX + (1 - alpha) * event.values[1]);
             scale = (float) 8.0;
+            currentAxisDegree=event.values[1]*10;
         } else {
-            sensorX = (alpha * sensorX + (1 - alpha) * event.values[2]);
-            scale = (float) 6.0;
-
+            sensorX = (alpha * sensorX + (1 - alpha) * event.values[1]);
+            scale = (float) 3.0;
+            currentAxisDegree=event.values[1]*10;
         }
     }
 
