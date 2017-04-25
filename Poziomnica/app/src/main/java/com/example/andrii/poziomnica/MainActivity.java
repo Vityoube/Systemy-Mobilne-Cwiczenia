@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         super.onPause();
         mSensorManager.unregisterListener(this);
     }
-
+s
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
