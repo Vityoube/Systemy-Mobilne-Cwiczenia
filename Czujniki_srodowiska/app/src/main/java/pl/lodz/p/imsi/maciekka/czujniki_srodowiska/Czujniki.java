@@ -67,7 +67,8 @@ public class Czujniki extends AppCompatActivity implements SensorEventListener {
 //        if (event.sensor.getType()==Sensor.TYPE_RELATIVE_HUMIDITY && event.sensor.getType()==Sensor.TYPE_AMBIENT_TEMPERATURE) {
             punkt_rosy = (float)Math.pow(wilgotnosc_w_procentach / 100, 1 / 8) *
                     (float)Math.abs((112 + (0.9 * temperatura_w_stopniach))) + (float)(0.1 * temperatura_w_stopniach) - (float)112;
-            bezwzgledna_wilgotnosc=(float)(wilgotnosc_w_procentach/punkt_rosy);
+            bezwzgledna_wilgotnosc=(float)(wilgotnosc_w_procentach/100)*(float)6.112*
+                    (float)Math.exp(17.62*temperatura_w_stopniach/(243.12+temperatura_w_stopniach))/(float)(273.15+temperatura_w_stopniach);
             EditText w_punkt_rosy = (EditText) findViewById(R.id.punkt_rosy);
             w_punkt_rosy.setText(String.format("Wartość punktu rosy = %.2f", punkt_rosy));
             EditText  w_bezwzgledna_wilgotnosc=(EditText)findViewById(R.id.bezwgledna_wilgotnosc);

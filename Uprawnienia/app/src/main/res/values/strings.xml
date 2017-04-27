@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Uprawnienia</string>
+    <string name="Lokalizacja_GPS">Lokalizacja GPS</string>
+    <string name="telefon">Połaczenia telefoniczne</string>
+    <string name="zapis_SD">Zapis na karcie SD</string>
+    <string name="czytanie_SD">Odczyt z karty SD</string>
+    <string name="Kamera">Dostęp do kamery</string>
+    <string name="kontakty">Dostęp do kontaktów</string>
+</resources>
