@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.kacpersk.kompas_gps">
+    <!-- wymagania związane z SDK minimalna wersja i docelowa -->
+   <!-- <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+        -->
+    <!-- uprawnienia aplikacji zwiazane z wykorzystaniem modułu GPS -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- sprawdzenie czy czy w telefonie jest niezbędny hardware, jezeli go nie ma aplikacja nie zostanie zainstalowana -->
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+    <!--
+-->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+       <!--  android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">-->
+        <activity android:name=".Kompas_Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

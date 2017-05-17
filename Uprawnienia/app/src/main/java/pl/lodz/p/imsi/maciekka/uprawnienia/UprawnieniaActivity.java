@@ -52,7 +52,7 @@ public class UprawnieniaActivity extends AppCompatActivity {
 
                 }
                 else {
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION+ " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
 
                 }
                 if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
@@ -60,7 +60,7 @@ public class UprawnieniaActivity extends AppCompatActivity {
 
 
 
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + "Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + " Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -71,32 +71,32 @@ public class UprawnieniaActivity extends AppCompatActivity {
         Button writeToSd = (Button) findViewById(R.id.write);
         writeToSd.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
 
                     // Jeżeli uprawnienia dla naszej aplikacji nie są nadane to pokazywane jest stosowne zapytanie
                     // metoda shouldShowRequestPermissionRationale zwraca true jeżeli użytkownik nie podjął decyzji
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
 
                         // Jeżeli uprawnienie nie zostały nadane
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXST);
 
                     } else {
                         //Metoda requestPermissions jest wywoływana aby uzytkownik mógł podjąć decyzję o nadaniu uprawnien
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_EXST);
                     }
 
                 }
                 else {
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.WRITE_EXTERNAL_STORAGE + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
 
                 }
-                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
 
 
 
 
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + "Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.WRITE_EXTERNAL_STORAGE + " Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -105,32 +105,32 @@ public class UprawnieniaActivity extends AppCompatActivity {
         Button readFromSd = (Button) findViewById(R.id.read);
         readFromSd.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
 
                     // Jeżeli uprawnienia dla naszej aplikacji nie są nadane to pokazywane jest stosowne zapytanie
                     // metoda shouldShowRequestPermissionRationale zwraca true jeżeli użytkownik nie podjął decyzji
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
 
 
                         // Jeżeli uprawnienie nie zostały nadane
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, READ_EXST);
 
                     } else {
                         //Metoda requestPermissions jest wywoływana aby uzytkownik mógł podjąć decyzję o nadaniu uprawnien
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, READ_EXST);
                     }
 
                 }
                 else {
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.READ_EXTERNAL_STORAGE + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
 
                 }
-                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED){
 
 
 
 
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + "Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.READ_EXTERNAL_STORAGE + " Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -139,32 +139,32 @@ public class UprawnieniaActivity extends AppCompatActivity {
         Button call = (Button) findViewById(R.id.call);
         call.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 
                     // Jeżeli uprawnienia dla naszej aplikacji nie są nadane to pokazywane jest stosowne zapytanie
                     // metoda shouldShowRequestPermissionRationale zwraca true jeżeli użytkownik nie podjął decyzji
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.CALL_PHONE)) {
 
 
                         // Jeżeli uprawnienie nie zostały nadane
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.CALL_PHONE}, CALL);
 
                     } else {
                         //Metoda requestPermissions jest wywoływana aby uzytkownik mógł podjąć decyzję o nadaniu uprawnien
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.CALL_PHONE}, CALL);
                     }
 
                 }
                 else {
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.CALL_PHONE + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
 
                 }
-                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
 
 
 
 
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + "Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.CALL_PHONE + " Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -174,32 +174,32 @@ public class UprawnieniaActivity extends AppCompatActivity {
         Button camera = (Button) findViewById(R.id.camera);
         camera.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
 
                     // Jeżeli uprawnienia dla naszej aplikacji nie są nadane to pokazywane jest stosowne zapytanie
                     // metoda shouldShowRequestPermissionRationale zwraca true jeżeli użytkownik nie podjął decyzji
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.CAMERA)) {
 
 
-                        // Jeżeli uprawnienie nie zostały nadane
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        // Jeżeli upr   awnienie nie zostały nadane
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.CAMERA}, CAMERA);
 
                     } else {
                         //Metoda requestPermissions jest wywoływana aby uzytkownik mógł podjąć decyzję o nadaniu uprawnien
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.CAMERA}, CAMERA);
                     }
 
                 }
                 else {
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.CAMERA + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
 
                 }
-                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
 
 
 
 
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + "Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.CAMERA + " Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -208,32 +208,32 @@ public class UprawnieniaActivity extends AppCompatActivity {
         Button accounts = (Button) findViewById(R.id.accounts);
         accounts.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
-                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                if (ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.GET_ACCOUNTS) != PackageManager.PERMISSION_GRANTED) {
 
                     // Jeżeli uprawnienia dla naszej aplikacji nie są nadane to pokazywane jest stosowne zapytanie
                     // metoda shouldShowRequestPermissionRationale zwraca true jeżeli użytkownik nie podjął decyzji
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                    if (ActivityCompat.shouldShowRequestPermissionRationale(UprawnieniaActivity.this, Manifest.permission.GET_ACCOUNTS)) {
 
 
                         // Jeżeli uprawnienie nie zostały nadane
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.GET_ACCOUNTS}, ACCOUNTS);
 
                     } else {
                         //Metoda requestPermissions jest wywoływana aby uzytkownik mógł podjąć decyzję o nadaniu uprawnien
-                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION);
+                        ActivityCompat.requestPermissions(UprawnieniaActivity.this, new String[]{Manifest.permission.GET_ACCOUNTS}, ACCOUNTS);
                     }
 
                 }
                 else {
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.GET_ACCOUNTS + " uprawnienia zostały przyznane.", Toast.LENGTH_SHORT).show();
 
                 }
-                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                if(ActivityCompat.checkSelfPermission(UprawnieniaActivity.this, Manifest.permission.GET_ACCOUNTS) != PackageManager.PERMISSION_GRANTED){
 
 
 
 
-                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.ACCESS_FINE_LOCATION + "Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(UprawnieniaActivity.this, " " + Manifest.permission.GET_ACCOUNTS + " Uprawnienia nie zostały nadane", Toast.LENGTH_SHORT).show();
                 }
 
             }
